@@ -18,9 +18,10 @@ public class Controller {
         List<Integer> ids = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14));
         System.out.println("Main" + Thread.currentThread().getName());
         Flux.fromIterable(ids).flatMap((x) -> {
+            System.out.println("test");
             return getData(x);
         }).subscribe();
-        System.out.println("Whats up");
+        System.out.println("TEst main");
         return null;
     }
 
